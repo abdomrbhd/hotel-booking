@@ -1,0 +1,55 @@
+.hotel__info {
+    color: var(--primary-color);
+    .info__wrap {
+        background-color: var(--secondry-color);
+        border-radius: .7rem;
+    }
+}
+
+.info__price {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 22px 1fr 22px;
+    grid-template-areas: 
+    "starts guests"
+    "price rooms"
+    "per .";
+    .starts, .per, .guests, .rooms {
+        font-size: .9rem;
+    }
+    .starts {
+        grid-area: starts;
+        align-self: end;
+    }
+    .price {
+        grid-area: price;
+        font-size: 1.6rem;
+        align-self: center;
+    }
+    .per {
+        grid-area: per;
+    }
+    .guests, .rooms {
+        justify-self: end;
+    }
+    .guests{
+        grid-area: guests;
+        align-self: end;
+    }
+    .rooms {
+        grid-area: rooms;
+        align-self: center;
+    }
+}
+
+.info__booking {
+    .phone {
+        font-weight: 600;
+    }
+}
+
+.info__other-options {
+    .button {
+        font-weight: 550;
+    }
+}

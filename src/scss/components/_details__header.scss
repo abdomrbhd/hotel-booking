@@ -1,0 +1,36 @@
+.details-item {
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        border-bottom: 2.5px solid var(--primary-background);
+        width: 0;
+        transition: width .3s;
+    }
+    &:before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &:after {
+        right: 50%;
+        transform: translateX(50%);
+    }
+    &:hover, &:active {
+        &:before, &:after {
+            width: 50%;
+            transform: translateX(0);
+        }
+    }
+}
+
+.detail--active {
+    color: var(--primary-background);
+    cursor: default;
+    &:before, &:after {
+        width: 50%;
+        transform: translateX(0);
+    }
+}

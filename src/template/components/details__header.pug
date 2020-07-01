@@ -1,0 +1,9 @@
+header.details__header
+    .container
+        ul.details__list.d-flex.justify-content-between
+            - var items = ["Package Summary", "Hotel Information", "Rooms", "Facilities & Activities", "Dining & Entertainment", "Reviews", "Questions & Answers"];
+            each i in items
+                if i == "Package Summary"
+                    li.details-item.detail--active #{i}
+                else
+                    li.details-item.pb-2 #{i}

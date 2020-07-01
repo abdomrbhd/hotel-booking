@@ -1,0 +1,17 @@
+.main-nav {
+    background-color: var(--secondry-color);
+    .navbar-list {    
+        display: flex;
+        justify-content: space-between;
+        .navbar-item {
+            .navbar-link {
+                font: {
+                    size: .8rem;
+                    weight: bold;
+                }
+                color: var(--primary-color);
+                letter-spacing: 1px;
+            }
+        }
+    }
+}

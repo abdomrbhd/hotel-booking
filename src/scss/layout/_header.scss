@@ -1,0 +1,18 @@
+.header {
+    background-color: var(--secondry-background);
+    .get-help {
+        p {
+            font-weight: 600;
+            margin-right: .8rem;
+        }
+        address {
+            font-size: .9rem;
+        }
+         > * {
+            display: inline-block;
+        }
+    }
+    i {
+        margin-right: 1rem;
+    }
+}

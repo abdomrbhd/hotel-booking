@@ -1,0 +1,22 @@
+extends layout
+
+block links
+    link(rel="stylesheet", href="../../vendors/bootstrap-4.4.1-dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="../../vendors/fontawesome/css/all.min.css")
+    link(rel="stylesheet", href="../css/style.css")
+
+block container
+
+    block header
+        include includes/header
+        include includes/search-bar
+        include includes/nav
+    .container-fluid
+        block main
+            include includes/main
+        block contents
+            include includes/details
+    block footer
+
+block scripts
+    script(src="../js/main.js")

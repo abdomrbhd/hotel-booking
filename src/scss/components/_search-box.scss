@@ -1,0 +1,17 @@
+.search-wrap {
+    border-radius: .25rem;
+    overflow: hidden;
+    width: 90%;
+    input[type="search"] {
+        background-color: var(--secondry-background);
+        border: none;
+        width: 80%;
+        &:focus {
+            outline: none;
+        }
+    }
+    button {
+        border-radius: 0;
+        width: 20%;
+    }
+}

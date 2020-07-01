@@ -1,0 +1,27 @@
+.button {
+    border: none;
+    outline: none;
+    padding: .25rem 1rem;
+    border-radius: .25rem;
+    text-transform: capitalize;
+    font-weight: 450;
+    &:focus {
+        outline: none;
+    }
+}
+
+.button-pr {
+    background-color: var(--primary-background);
+    color: var(--primary-color);
+    // span {
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%) scale(1);
+    //     width: 10px;
+    //     height: 10px;
+    //     border-radius: 50%;
+    //     background-color: #0003;
+    //     transition: transform .5s;
+    // }
+}
