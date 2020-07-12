@@ -15,7 +15,7 @@ const gulp = require("gulp"),
 gulp.task("html", function () {
   return gulp
     .src("src/template/index.pug")
-    .pipe(pug({pretty: true}))
+    .pipe(pug({ pretty: true }))
     .pipe(gulp.dest("dist/html"))
     .pipe(livereload());
 });

@@ -1,0 +1,31 @@
++section("about-us")
+    .container
+        header.about-us__header.pb-5
+            h3.text-uppercase.text-center what people thinks about us
+        .about-us__slider.pt-5
+            .container-fluid
+                .slider__inner
+                    .row.no-gutters
+                        .chevron-wrap.col-2.d-flex
+                            a(href="#" class="m-auto")
+                                i.fa.fa-chevron-left
+                        .quote-wrap.col-8
+                            header.quote-header.position-relative.mb-1.text-center
+                                .person-img
+                                    img(src="../../assets/images/avatar.png" class="img-fluid")
+                                .person-name.mb-2
+                                    span.font-weight-bold Megan Fox
+                                .stay-date
+                                    span stayed #[time(datetime="2019-11-18") 18 Nav, 2019]
+                                .person-ratte
+                                    include ../components/stars__ratting
+                            .quote-body.mt-4
+                                p
+                                    | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam soluta, 
+                                    | vero neque enim distinctio nisi aspernatur dolorem, vitae, quaerat sed fugiat Mollitia dicta eius ipsa rerum magni 
+                                    | aspernatur cum repudiandae
+                                    | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam soluta, vero neque enim distinctio nisi aspernatur dolorem, 
+                                    | vitae, quaerat sed fugiat Mollitia dicta eius ipsa rerum magni aspernatur cum repudiandae
+                        .chevron-wrap.col-2.d-flex
+                            a(href="#" class="m-auto")
+                                i.fa.fa-chevron-right

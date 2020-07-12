@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../vendors/bootstrap-4.4.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../vendors/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../vendors/fontawesome-free-5.13.0-web/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
@@ -83,7 +83,9 @@
                 <div class="row">
                   <div class="hotel__title col-6">
                     <div class="row">
-                      <div class="stars col-12"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                      <div class="stars col-12">
+                        <div class="stars-ratting"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        </div>
                       </div>
                       <div class="headline col-8">
                         <h3 class="text-uppercase">grand hilton hotel</h3>
@@ -120,7 +122,7 @@
                     </div>
                   </div>
                   <div class="hotel__location pt-3">
-                    <div class="location__inner"></div>
+                    <div class="location__inner" id="map"></div>
                   </div>
                 </div>
               </aside>
@@ -128,7 +130,7 @@
           </div>
         </div>
       </main>
-      <section class="details pt-4 pb-4">
+      <section class="details pt-5 pb-5">
         <header class="details__header">
           <div class="container">
             <ul class="details__list d-flex justify-content-between">
@@ -144,11 +146,434 @@
         </header>
         <div class="details-contents">
           <div class="container">
-            <section class="package-summary">hello world</section>
+            <div class="details__wrap d-flex overflow-hidden">
+              <section class="package-summery pt-3 pb-3">
+                <header class="summery__header pb-4">
+                  <h3 class="text-uppercase">Package Summery</h3>
+                </header>
+                <div class="summery__content">
+                  <div class="summary__top d-flex justify-content-between mb-4">
+                    <div class="package-highlights">
+                      <header class="package-highlights__header">
+                        <h4>Package Highlights</h4>
+                      </header>
+                      <div class="package-highlights__body">
+                        <ul class="row no-gutters">
+                          <li class="col-6">Half Board/ All Inclusive</li>
+                          <li class="col-6">Luxurious 5-Star Hotel</li>
+                          <li class="col-6">Child Under 11 Years Stay Free</li>
+                          <li class="col-6">Banyan An Adult Only Zone</li>
+                          <li class="col-6">LUX* Me Spa</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="offer-details">
+                      <header class="offer-details__header">
+                        <h4>Offer Details</h4>
+                      </header>
+                      <div class="offer-details__body">
+                        <div class="row no-gutters">
+                          <ul class="col-6">
+                            <li>Benefit from a special discounted CHILL'OUT OFFER at Grand Hilton Hotel.</li>
+                          </ul>
+                          <div class="date col-6 text-right">
+                            <time datetime="2020-3-10">10th March</time> - 
+                            <time datetime="2020-4-30">30th April 2020</time>
+                          </div>
+                          <div class="note col-12"><span class="small">* Valid until 30 April 2020</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="package-details mt-4">
+                    <header class="package-details__header">
+                      <h4>Package Summery Details</h4>
+                    </header>
+                    <div class="package-details__body">
+                      <div class="row no-gutters">
+                        <div class="purchase col-4">
+                          <h5>Purchase Inclusions</h5>
+                          <ul>
+                            <li>Room as per selection</li>
+                            <li>Half Board or All Inclusive Meal Plan</li>
+                            <li>Complimentary Land &amp; Water activities</li>
+                            <li>Child Under 11 years old stays free</li>
+                            <li>Free Wi-Fi</li>
+                            <li>Free Secure Parking</li>
+                          </ul>
+                        </div>
+                        <div class="complimentary-land col-4">
+                          <h5>Complimentary Land Based Activities</h5>
+                          <ul>
+                            <li>Gym</li>
+                            <li>Beach Volley</li>
+                            <li>Table tennis</li>
+                            <li>Soccer balls</li>
+                            <li>Yoga</li>
+                            <li>Unlimited access to driving range</li>
+                          </ul>
+                        </div>
+                        <div class="complimentary-water col-4">
+                          <h5>Complimentary Water Based Activities</h5>
+                          <ul>
+                            <li>Water skining</li>
+                            <li>Windsurfing</li>
+                            <li>Pedal boats</li>
+                            <li>Kayaking</li>
+                            <li>Aqua Gym</li>
+                            <li>Glass bottom boat trips</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <hr style="border-top: 2px dashed rgba(0,0,0,.1);">
+                      <div class="row no-gutters">
+                        <div class="meal-plan col-4">
+                          <h5>Meal Plan Available</h5>
+                          <ul>
+                            <li>Half Board</li>
+                            <li>All Inclusive</li>
+                          </ul>
+                        </div>
+                        <div class="entertainment col-4">
+                          <h5>Entertainment</h5>
+                          <ul>
+                            <li>Live music</li>
+                            <li>DJ &amp; Mauritian Dance Show</li>
+                          </ul>
+                        </div>
+                        <div class="check-in col-4">
+                          <h5>Check In &amp; Check Out</h5>
+                          <ul>
+                            <li>Check In Time 14:00</li>
+                            <li>Check Out Time 11:00</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="hotel-information d-flex h-100">
+                <h2 class="m-auto">hotel-information</h2>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="other-package pt-5 pb-5">
+        <div class="container">
+          <header class="other-package__header mb-5">
+            <h3 class="text-uppercase text-center">Other package</h3>
+          </header>
+          <div class="other-package__packages d-flex justify-content-between flex-wrap">
+            <div class="package__hotel-blue pkg overflow-hidden">
+              <div class="hotel-blue__image">
+                <div class="img-inner"><img class="img-fluid" src="../../../assets/images/view-of-tourist-resort-338504.jpg" alt=""></div>
+              </div>
+              <div class="hotel-blue__content pkg-content">
+                <div class="stars">
+                  <div class="stars-ratting"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <h4 class="hotel-blue__title mb-4">Hotel Blue Haven</h4>
+                <p class="hotel-blue__text mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A, iste et? Consectetur minus similique ratione veniam. Voluptatum, animi. Error culpa dolor perspiciatis non doloribus consequatur a enim ab, aut in!</p>
+                <ul class="hotel-blue__info mt-3 mb-3">
+                  <li>1749 Wheeler Ridge Delaware</li>
+                  <li><i class="fa fa-user mr-1"></i> 2 x Guests</li>
+                  <li>1 x Room</li>
+                </ul>
+                <footer class="hotel-blue__footer pkg-footer">
+                  <div class="row no-gutters">
+                    <div class="price-old col-12"><i class="fa fa-dollar-sign mr-1"></i>10,500</div>
+                    <div class="hotel-blue__price price col-6"><i class="fa fa-dollar-sign mr-1"></i>8,500</div>
+                    <div class="hotel-blue__btn col-6 text-right">
+                      <button class="button button-pr pt-2 pr-4 pb-2 pl-4">Book Now</button>
+                    </div>
+                  </div>
+                </footer>
+              </div>
+            </div>
+            <div class="package__lux pkg overflow-hidden">
+              <div class="lux__image">
+                <div class="img-inner"><img class="img-fluid" src="../../../assets/images/view-of-tourist-resort-338504.jpg" alt=""></div>
+              </div>
+              <div class="lux__content pkg-content">
+                <h4 class="lux__title mb-4">LUX* Belle Mare</h4>
+                <ul class="lux__info mt-3 mb-3">
+                  <li>1749 Wheeler Ridge Delaware</li>
+                  <li><i class="fa fa-user mr-1"></i> 2 x Guests</li>
+                  <li>1 x Room</li>
+                </ul>
+                <footer class="lux__footer pkg-footer">
+                  <div class="row no-gutters">
+                    <div class="price-old col-12"><i class="fa fa-dollar-sign mr-1"></i>8,500</div>
+                    <div class="lux__price price col-6"><i class="fa fa-dollar-sign mr-1"></i>3,000</div>
+                    <div class="lux__btn col-6 text-right">
+                      <button class="button button-pr pt-2 pr-4 pb-2 pl-4">Book Now</button>
+                    </div>
+                  </div>
+                </footer>
+              </div>
+            </div>
+            <div class="package__white-place pkg overflow-hidden">
+              <div class="white-place__image">
+                <div class="img-inner"><img class="img-fluid" src="../../../assets/images/view-of-tourist-resort-338504.jpg" alt=""></div>
+              </div>
+              <div class="white-place__content pkg-content">
+                <h4 class="white-place__title mb-4">White Place</h4>
+                <ul class="white-place__info mt-3 mb-3">
+                  <li>1749 Wheeler Ridge Delaware</li>
+                  <li><i class="fa fa-user mr-1"></i> 2 x Guests</li>
+                  <li>1 x Room</li>
+                </ul>
+                <footer class="white-place__footer pkg-footer">
+                  <div class="row no-gutters">
+                    <div class="price-old col-12"><i class="fa fa-dollar-sign mr-1"></i>10,500</div>
+                    <div class="white-place__price price col-6"><i class="fa fa-dollar-sign mr-1"></i>9,500</div>
+                    <div class="white-place__btn col-6 text-right">
+                      <button class="button button-pr pt-2 pr-4 pb-2 pl-4">Book Now</button>
+                    </div>
+                  </div>
+                </footer>
+              </div>
+            </div>
+            <div class="package__luxury-place pkg overflow-hidden">
+              <div class="luxury-place__image">
+                <div class="img-inner"><img class="img-fluid" src="../../../assets/images/view-of-tourist-resort-338504.jpg" alt=""></div>
+              </div>
+              <div class="luxury-place__content pkg-content">
+                <h4 class="luxury-place__title mb-4">Luxury Place</h4>
+                <ul class="luxury-place__info mt-3 mb-3">
+                  <li>1749 Wheeler Ridge Delaware</li>
+                  <li><i class="fa fa-user mr-1"></i> 2 x Guests</li>
+                  <li>1 x Room</li>
+                </ul>
+                <footer class="luxury-place__footer pkg-footer">
+                  <div class="row no-gutters">
+                    <div class="price-old col-12"><i class="fa fa-dollar-sign mr-1"></i>4,500</div>
+                    <div class="luxury-place__price price col-6"><i class="fa fa-dollar-sign mr-1"></i>2,500</div>
+                    <div class="luxury-place__btn col-6 text-right">
+                      <button class="button button-pr pt-2 pr-4 pb-2 pl-4">Book Now</button>
+                    </div>
+                  </div>
+                </footer>
+              </div>
+            </div>
+            <div class="package__hotel-five-star pkg overflow-hidden">
+              <div class="hotel-five-star__image">
+                <div class="img-inner"><img class="img-fluid" src="../../../assets/images/view-of-tourist-resort-338504.jpg" alt=""></div>
+              </div>
+              <div class="hotel-five-star__content pkg-content">
+                <h4 class="hotel-five-star__title mb-4">Hotel Five Star</h4>
+                <ul class="hotel-five-star__info mt-3 mb-3">
+                  <li>1749 Wheeler Ridge Delaware</li>
+                  <li><i class="fa fa-user mr-1"></i> 2 x Guests</li>
+                  <li>1 x Room</li>
+                </ul>
+                <footer class="hotel-five-star__footer pkg-footer">
+                  <div class="row no-gutters">
+                    <div class="price-old col-12"><i class="fa fa-dollar-sign mr-1"></i>6,500</div>
+                    <div class="hotel-five-star__price price col-6"><i class="fa fa-dollar-sign mr-1"></i>3,500</div>
+                    <div class="hotel-five-star__btn col-6 text-right">
+                      <button class="button button-pr pt-2 pr-4 pb-2 pl-4">Book Now</button>
+                    </div>
+                  </div>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about-us pt-5 pb-5">
+        <div class="container">
+          <header class="about-us__header pb-5">
+            <h3 class="text-uppercase text-center">what people thinks about us</h3>
+          </header>
+          <div class="about-us__slider pt-5">
+            <div class="container-fluid">
+              <div class="slider__inner">
+                <div class="row no-gutters">
+                  <div class="chevron-wrap col-2 d-flex"><a class="m-auto" href="#"><i class="fa fa-chevron-left"></i></a></div>
+                  <div class="quote-wrap col-8">
+                    <header class="quote-header position-relative mb-1 text-center">
+                      <div class="person-img"><img class="img-fluid" src="../../assets/images/avatar.png"></div>
+                      <div class="person-name mb-2"><span class="font-weight-bold">Megan Fox</span></div>
+                      <div class="stay-date"><span>stayed 
+                          <time datetime="2019-11-18">18 Nav, 2019</time></span></div>
+                      <div class="person-ratte">
+                        <div class="stars-ratting"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        </div>
+                      </div>
+                    </header>
+                    <div class="quote-body mt-4">
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam soluta, 
+                        vero neque enim distinctio nisi aspernatur dolorem, vitae, quaerat sed fugiat Mollitia dicta eius ipsa rerum magni 
+                        aspernatur cum repudiandae
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam soluta, vero neque enim distinctio nisi aspernatur dolorem, 
+                        vitae, quaerat sed fugiat Mollitia dicta eius ipsa rerum magni aspernatur cum repudiandae
+                      </p>
+                    </div>
+                  </div>
+                  <div class="chevron-wrap col-2 d-flex"><a class="m-auto" href="#"><i class="fa fa-chevron-right"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="subscribe position-relative pt-5 pb-5">
+        <div class="subscribe__inner position-relative">
+          <div class="sub-wrap position-relative">
+            <div class="container">
+              <div class="row">
+                <div class="subscribe-content col-8 offset-2 d-flex justify-content-between align-items-end pt-4 pb-4">
+                  <div class="title">
+                    <h3 class="mb-0">subscribe to our<br><span class="text-uppercase">newsletter</span></h3>
+                  </div>
+                  <div class="search">
+                    <div class="search_box">
+                      <div class="search-wrap m-auto d-flex">
+                        <input type="email" placeholder="Your Email Address">
+                        <button class="button button-pr">send</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overllay position-absolute w-100 h-100"></div>
+      </section>
+      <section class="other-activities pt-5 pb-5">
+        <div class="container">
+          <header class="other-activities__header mb-5">
+            <h3 class="text-uppercase">other activities</h3>
+          </header>
+          <div class="activities">
+            <div class="activities__wrap d-flex justify-content-between">
+              <div class="activity p-4 overflow-hidden d-flex">
+                <div class="activity__content mt-auto">
+                  <h6 class="mb-3">The curious corner of chamarel</h6>
+                  <button class="button button-pr pt-1 pr-4 pb-1 pl-4">Book Now</button>
+                </div>
+              </div>
+              <div class="activity p-4 overflow-hidden d-flex">
+                <div class="activity__content mt-auto">
+                  <h6 class="mb-3">Gymkhana club golf course</h6>
+                  <button class="button button-pr pt-1 pr-4 pb-1 pl-4">Book Now</button>
+                </div>
+              </div>
+              <div class="activity p-4 overflow-hidden d-flex">
+                <div class="activity__content mt-auto">
+                  <h6 class="mb-3">Tamarind falls hiking trip - full day</h6>
+                  <button class="button button-pr pt-1 pr-4 pb-1 pl-4">Book Now</button>
+                </div>
+              </div>
+              <div class="activity p-4 overflow-hidden d-flex">
+                <div class="activity__content mt-auto">
+                  <h6 class="mb-3">The blue marine discovery quest</h6>
+                  <button class="button button-pr pt-1 pr-4 pb-1 pl-4">Book Now</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </div>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer__headline col-3 mb-5">
+            <h2 class="text-uppercase">best<br><span>tour</span><br>plan</h2>
+          </div>
+          <div class="footer__categories col-3 mb-5">
+            <h3>all categories</h3>
+            <ul>
+              <li><a href="#">all deals</a></li>
+              <li><a href="#">hotels</a></li>
+              <li><a href="#">activities</a></li>
+              <li><a href="#">hotel day packages</a></li>
+              <li><a href="#">restaurants</a></li>
+              <li><a href="#">events</a></li>
+              <li><a href="#">rodrigues</a></li>
+            </ul>
+          </div>
+          <div class="footer__grouup col-6 mb-5">
+            <div class="row no-gutters">
+              <div class="footer__additional-info col-6">
+                <h3>additional information</h3>
+                <ul>
+                  <li>About Us</li>
+                  <li>Contact Us</li>
+                  <li>How does it work?</li>
+                  <li>Frequently Asked Questions</li>
+                  <li>Deals.mu loyalty program</li>
+                  <li>Promote your Business on BTP</li>
+                </ul>
+              </div>
+              <div class="footer__legal-info col-6">
+                <h3>legal information</h3>
+                <ul>
+                  <li>Terms &amp; Conditions</li>
+                  <li>Disclimer</li>
+                  <li>Cancellation policy</li>
+                  <li>Privacy</li>
+                </ul>
+              </div>
+              <div class="footer__social-network col-12">
+                <div class="row no-gutters">
+                  <h3 class="col-5 mb-0">social network</h3>
+                  <div class="icons col-4"><i class="fab fa-facebook m-1"></i><i class="fab fa-youtube m-1"></i><i class="fab fa-twitter m-1"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__contact col-6 mt-5">
+            <h3>contact details</h3>
+            <p>Feel free to contact us by phone, email or by our contact form.</p>
+            <ul>
+              <li><i class="fa fa-location-arrow mr-3"></i> 9748 Blossom Hill Rd undefined lansing, ldaho 68545 United States</li>
+              <li class="d-flex"><i class="fa fa-phone mt-2 mr-4"></i>
+                <ul>
+                  <li>Tel (business hours) : 269 1500</li>
+                  <li>Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am - 20:00 pm)</li>
+                  <li>Tel (hotline) Sunday: 52-56-61-38 (08:00 am - 14:00 pm)</li>
+                </ul>
+              </li>
+              <li><i class="fa fa-envelope mr-3"></i> cherly.lowson@example.com</li>
+            </ul>
+          </div>
+          <div class="footer__form col-6 mt-5">
+            <h3>send us a message</h3>
+            <form>
+              <div class="form-group d-flex justify-content-between">
+                <input type="text" placeholder="Your Full Name*" name="full-name" required>
+                <input type="text" placeholder="Phone Number*" name="phone-number" required>
+              </div>
+              <div class="form-group">
+                <textarea class="w-100" placeholder="Message"></textarea>
+              </div>
+              <div class="form-group d-flex justify-content-between align-items-center">
+                <input class="button button-pr" type="submit" value="send"><span class="small font-weight-bold">* Required Fields</span>
+              </div>
+            </form>
+          </div>
+          <div class="footer__bottom col-12 d-flex align-items-center">
+            <div class="terms-and-conditions m-auto">
+              <ul>
+                <li class="d-inline-block">Disclaimer</li>
+                <li class="d-inline-block">Conditions of use</li>
+                <li class="d-inline-block">Cancellation policy</li>
+              </ul>
+            </div>
+            <div class="credits"><i class="fa fa-credit-card ml-2"></i><i class="fab fa-cc-paypal ml-2"></i></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer ends-->
     <script src="../js/main.js"></script>
   </body>
 </html>

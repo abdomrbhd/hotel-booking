@@ -1,6 +1,6 @@
 const StaticServer = require("static-server"),
   server = new StaticServer({
-    rootPath: ".",
+    rootPath: "./dist/html",
     port: 8000,
   });
 server.start(() => {

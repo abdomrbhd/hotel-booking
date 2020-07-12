@@ -1,0 +1,11 @@
++section("other-activities")
+    .container
+        header.other-activities__header.mb-5
+            h3.text-uppercase other activities
+        .activities
+            .activities__wrap.d-flex.justify-content-between
+                each act in activities
+                    .activity.p-4.overflow-hidden.d-flex
+                        .activity__content.mt-auto
+                            h6.mb-3 #{act.headline}
+                            button(class="button button-pr pt-1 pr-4 pb-1 pl-4") Book Now

@@ -1,0 +1,32 @@
++section("other-package")
+    .container
+        header.other-package__header.mb-5
+            h3.text-uppercase.text-center Other package
+        .other-package__packages.d-flex.justify-content-between.flex-wrap
+            each val, key in pkgs
+                div(class="package__" + key + " pkg overflow-hidden")
+                    div(class=key + "__image")
+                        .img-inner
+                            img(src=val.img alt="" class="img-fluid")
+                    div(class=key + "__content pkg-content")
+                        if key === "hotel-blue"
+                            .stars
+                                include ../components/stars__ratting
+                        h4(class=key + "__title mb-4")
+                            | #{val.title}
+                        if key === "hotel-blue"
+                            p(class=key + "__text mb-4") Lorem ipsum dolor, sit amet consectetur adipisicing elit. A, iste et? Consectetur minus similique ratione veniam. Voluptatum, animi. Error culpa dolor perspiciatis non doloribus consequatur a enim ab, aut in!
+                        ul(class=key + "__info mt-3 mb-3")
+                            li 1749 Wheeler Ridge Delaware
+                            li #[i.fa.fa-user.mr-1] 2 x Guests
+                            li 1 x Room
+                        footer(class=key + "__footer pkg-footer")
+                            .row.no-gutters
+                                .price-old.col-12
+                                    i.fa.fa-dollar-sign.mr-1
+                                    | #{val.price[0]}
+                                div(class=key + "__price price col-6")
+                                    i.fa.fa-dollar-sign.mr-1
+                                    | #{val.price[1]}
+                                div(class=key + "__btn col-6 text-right")
+                                    button(class="button button-pr pt-2 pr-4 pb-2 pl-4") Book Now

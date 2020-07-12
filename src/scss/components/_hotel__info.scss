@@ -14,7 +14,10 @@
     "starts guests"
     "price rooms"
     "per .";
-    .starts, .per, .guests, .rooms {
+    .starts,
+    .per,
+    .guests,
+    .rooms {
         font-size: .9rem;
     }
     .starts {

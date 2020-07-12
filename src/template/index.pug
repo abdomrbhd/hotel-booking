@@ -1,8 +1,10 @@
 extends layout
 
+include helpers/mixins
+
 block links
-    link(rel="stylesheet", href="../../vendors/bootstrap-4.4.1-dist/css/bootstrap.min.css")
-    link(rel="stylesheet", href="../../vendors/fontawesome/css/all.min.css")
+    link(rel="stylesheet", href="../../vendors/bootstrap/bootstrap.min.css")
+    link(rel="stylesheet", href="../../vendors/fontawesome-free-5.13.0-web/css/all.min.css")
     link(rel="stylesheet", href="../css/style.css")
 
 block container
@@ -16,7 +18,12 @@ block container
             include includes/main
         block contents
             include includes/details
+            include includes/other-package
+            include includes/about-us
+            include includes/subscribe
+            include includes/other-activities
     block footer
+        include includes/footer
 
 block scripts
     script(src="../js/main.js")

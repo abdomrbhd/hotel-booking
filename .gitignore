@@ -1,4 +1,5 @@
 /node_modules
 /vendors
+/__tests__
 
 site.zip

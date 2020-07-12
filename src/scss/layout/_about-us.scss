@@ -1,0 +1,27 @@
+/*
+ * About us
+ */
+.quote-wrap {
+    background-color: var(--primary-color);
+    border-radius: .4rem;
+    padding: 3rem 6rem !important;
+}
+
+.person-name {
+    color: var(--primary-background)
+}
+
+.person-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100%;
+    width: 95px;
+    height: 95px;
+}
+
+.quote-body {
+    p {
+        line-height: 28px;
+    }
+}

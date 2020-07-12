@@ -3,8 +3,7 @@ header(class="hotel__header col-12 pb-4")
         .hotel__title.col-6
             .row
                 .stars.col-12
-                    - for( let i = 0; i < 5; i++ )
-                        i.fa.fa-star
+                    include stars__ratting
                 .headline.col-8
                     h3.text-uppercase grand hilton hotel
                 .offer.col-4.d-flex.align-items-center

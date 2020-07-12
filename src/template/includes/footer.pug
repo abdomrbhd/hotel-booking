@@ -1,0 +1,69 @@
+footer.main-footer
+    .container
+        .row
+            .footer__headline.col-3.mb-5
+                h2.text-uppercase best#[br]#[span tour]#[br]plan
+            .footer__categories.col-3.mb-5
+                h3 all categories
+                ul
+                    each i in navItems
+                        li
+                            a(href="#") #{i}
+            .footer__grouup.col-6.mb-5
+                .row.no-gutters
+                    .footer__additional-info.col-6
+                        h3 additional information
+                        ul
+                            li About Us
+                            li Contact Us
+                            li How does it work?
+                            li Frequently Asked Questions
+                            li Deals.mu loyalty program
+                            li Promote your Business on BTP
+                    .footer__legal-info.col-6
+                        h3 legal information
+                        ul
+                            li Terms &amp; Conditions
+                            li Disclimer
+                            li Cancellation policy
+                            li Privacy
+                    .footer__social-network.col-12
+                        .row.no-gutters
+                            h3.col-5.mb-0 social network
+                            .icons.col-4
+                                i.fab.fa-facebook.m-1
+                                i.fab.fa-youtube.m-1
+                                i.fab.fa-twitter.m-1
+            .footer__contact.col-6.mt-5
+                h3 contact details
+                p Feel free to contact us by phone, email or by our contact form.
+                ul
+                    li #[i.fa.fa-location-arrow.mr-3] 9748 Blossom Hill Rd undefined lansing, ldaho 68545 United States
+                    li.d-flex
+                        i.fa.fa-phone.mt-2.mr-4
+                        ul
+                            li Tel (business hours) : 269 1500
+                            li Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am - 20:00 pm)
+                            li Tel (hotline) Sunday: 52-56-61-38 (08:00 am - 14:00 pm)
+                    li #[i.fa.fa-envelope.mr-3] cherly.lowson@example.com
+            .footer__form.col-6.mt-5
+                h3 send us a message
+                form
+                    .form-group.d-flex.justify-content-between
+                        input(type="text" placeholder="Your Full Name*" name="full-name" required)
+                        input(type="text" placeholder="Phone Number*" name="phone-number" required)
+                    .form-group
+                        textarea(placeholder="Message" class="w-100")
+                    .form-group.d-flex.justify-content-between.align-items-center
+                        input(type="submit" class="button button-pr" value="send")
+                        span.small.font-weight-bold * Required Fields
+            .footer__bottom.col-12.d-flex.align-items-center
+                .terms-and-conditions.m-auto
+                    ul
+                        li.d-inline-block Disclaimer
+                        li.d-inline-block Conditions of use
+                        li.d-inline-block Cancellation policy
+                .credits
+                    i.fa.fa-credit-card.ml-2
+                    i.fab.fa-cc-paypal.ml-2
+// footer ends

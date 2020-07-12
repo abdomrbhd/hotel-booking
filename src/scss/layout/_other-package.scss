@@ -1,0 +1,57 @@
+/*
+ * Other Package
+ */
+.pkg {
+    background-color: var(--secondry-color);
+    color: var(--primary-color);
+    border-radius: .4rem;
+    margin-bottom: 2rem;
+    .pkg-content {
+        padding: 1.7rem 1.3rem;
+    }
+}
+
+.pkg:not(.package__hotel-blue) {
+    flex: 0 0 31%;
+    max-width: 31%;
+}
+
+.pkg-footer {
+    .price-old {
+        text-decoration: line-through;
+    }
+    .price {
+        align-self: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+}
+
+.package__hotel-blue {
+    flex: 0 0 65.5%;
+    max-width: 65.5%;
+    display: flex;
+}
+
+.hotel-blue__image {
+    flex: 0 0 50%;
+    max-width: 50%;
+    .img-inner {
+        height: 100%;
+    }
+}
+
+.hotel-blue__content {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel-blue__footer {
+    margin-top: auto;
+}
+
+.img-inner {
+    min-height: 250px;
+}

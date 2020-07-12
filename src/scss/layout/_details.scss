@@ -1,9 +1,16 @@
 @import '../components/details__header';
 
+.details__wrap {
+    > section {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
 @import "../components/package-summary";
-// @import "../components/hotel-information";
-// @import "../components/rooms";
-// @import "../components/facilities-activities";
-// @import "../components/dining-entertainment";
-// @import "../components/reviews";
-// @import "../components/questions";
+@import "../components/hotel-information";
+@import "../components/rooms";
+@import "../components/facilities-activities";
+@import "../components/dining-entertainment";
+@import "../components/reviews";
+@import "../components/questions";

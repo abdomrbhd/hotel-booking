@@ -2,7 +2,8 @@
     border-radius: .25rem;
     overflow: hidden;
     width: 90%;
-    input[type="search"] {
+    input[type="search"],
+    input[type="email"] {
         background-color: var(--secondry-background);
         border: none;
         width: 80%;
