@@ -50,9 +50,9 @@ gulp.task("js", function () {
 });
 
 // compress files task
-gulp.task("compress", function () {
-  return gulp.src("dist/**/*.*").pipe(zip("site.zip")).pipe(gulp.dest("."));
-});
+// gulp.task("compress", function () {
+//   return gulp.src("dist/**/*.*").pipe(zip("site.zip")).pipe(gulp.dest("."));
+// });
 
 // watch task
 gulp.task("watch", function () {
@@ -61,7 +61,7 @@ gulp.task("watch", function () {
   gulp.watch("src/**/*.pug", gulp.series("html"));
   gulp.watch("src/scss/**/*.scss", gulp.series("css"));
   gulp.watch("src/js/*.js", gulp.series("js"));
-  gulp.watch("dist/**/*.*", gulp.series("compress"));
+  // gulp.watch("dist/**/*.*", gulp.series("compress"));
 });
 
 // default task

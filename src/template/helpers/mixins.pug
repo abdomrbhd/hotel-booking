@@ -1,3 +1,17 @@
 mixin section(cls)
     section(class=cls + " pt-5 pb-5")
         block
+
+mixin generate_icons(icons=[], linked=false, links=[])
+    if linked
+        if links[0] == undefined
+            each i in icons
+                a(href="#")
+                    i(class=i)
+        else
+            - for (let i = 0; i < icons.length; i++)
+                a(href="https://www." + links[i], target="_blank")
+                    i(class=icons[i])
+    else
+        each i in icons
+            i(class=i)

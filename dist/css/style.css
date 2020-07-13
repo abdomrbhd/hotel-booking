@@ -13,6 +13,16 @@
   background-size: cover;
 }
 
+.headline-pr {
+  font-size: 3.5rem;
+  font-family: 'Luckiest Guy', sans-serif;
+  margin-bottom: 0;
+}
+
+.headline-pr span {
+  color: var(--primary-background);
+}
+
 body {
   height: 4500px;
 }
@@ -80,12 +90,7 @@ a {
 }
 
 .header__title h2 {
-  font-weight: 900;
-  font-size: 1.7rem;
-}
-
-.header__title h2 span {
-  color: var(--primary-background);
+  font-size: 1.9rem;
 }
 
 .search-wrap {
@@ -118,8 +123,7 @@ a {
 .user-setting .user .avatar {
   width: 50px;
   height: 50px;
-  background: url("../../assets/images/adult-attractive-beautiful-beauty-415829.jpg") no-repeat center center;
-  background-size: cover;
+  background-image: url("../../assets/images/avatar.jpg");
 }
 
 .main-nav {
@@ -578,12 +582,6 @@ main .url {
 
 .main-footer h2 {
   color: var(--primary-color);
-  font-weight: 900;
-  font-size: 3.5rem;
-}
-
-.main-footer h2 span {
-  color: var(--primary-background);
 }
 
 .main-footer h3 {
@@ -601,9 +599,13 @@ main .url {
   text-transform: capitalize;
 }
 
+.main-footer .footer__social-network i {
+  margin: 0.25rem;
+}
+
 .main-footer form input,
 .main-footer form textarea {
-  border-radius: .4rem;
+  border-radius: calc(var(--round) - .3rem);
 }
 
 .main-footer form input:not([type="submit"]) {
@@ -638,6 +640,10 @@ main .url {
 
 .footer__bottom .terms-and-conditions li {
   display: inline-block;
+}
+
+.footer__bottom .credits i {
+  margin-left: .5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

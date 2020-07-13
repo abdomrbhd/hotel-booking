@@ -6,11 +6,6 @@
     padding: 5rem 0 3rem;
     h2 {
         color: var(--primary-color);
-        font-weight: 900;
-        font-size: 3.5rem;
-        span {
-            color: var(--primary-background);
-        }
     }
     h3 {
         color: var(--primary-color);
@@ -25,11 +20,13 @@
         color: var(--light);
         text-transform: capitalize;
     }
-
+    .footer__social-network i {
+        margin: 0.25rem;
+    }
     form {
         input,
         textarea {
-            border-radius: .4rem;
+            border-radius: calc(var(--round) - .3rem);
         }
         input:not([type="submit"]) {
             flex: 0 0 48%;
@@ -63,6 +60,11 @@
     .terms-and-conditions {
         li {
             display: inline-block;
+        }
+    }
+    .credits {
+        i {
+            margin-left: .5rem;
         }
     }
 }

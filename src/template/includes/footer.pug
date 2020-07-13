@@ -2,38 +2,45 @@ footer.main-footer
     .container
         .row
             .footer__headline.col-3.mb-5
-                h2.text-uppercase best#[br]#[span tour]#[br]plan
+                h2.headline-pr BeST#[br]#[span TouR]#[br]PLAn
             .footer__categories.col-3.mb-5
                 h3 all categories
                 ul
                     each i in navItems
                         li
                             a(href="#") #{i}
-            .footer__grouup.col-6.mb-5
+            .footer__group.col-6.mb-5
                 .row.no-gutters
                     .footer__additional-info.col-6
                         h3 additional information
                         ul
-                            li About Us
-                            li Contact Us
-                            li How does it work?
-                            li Frequently Asked Questions
-                            li Deals.mu loyalty program
-                            li Promote your Business on BTP
+                            -
+                                const additionInfo = [
+                                    "About Us",
+                                    "Contact Us",
+                                    "How does it work?",
+                                    "Frequently Asked Questions",
+                                    "Deals.mu loyalty program",
+                                    "Promote your Business on BTP"
+                                ];
+                            each a in additionInfo
+                                li
+                                    a(href="#") #{a}
                     .footer__legal-info.col-6
                         h3 legal information
                         ul
-                            li Terms &amp; Conditions
-                            li Disclimer
-                            li Cancellation policy
-                            li Privacy
+                            -
+                                const legalInfo = ["Terms & Conditions", "Disclimer", "Cancellation policy", "Privacy"];
+                            each i in legalInfo
+                                li
+                                    a(href="#") #{i}
                     .footer__social-network.col-12
                         .row.no-gutters
                             h3.col-5.mb-0 social network
                             .icons.col-4
-                                i.fab.fa-facebook.m-1
-                                i.fab.fa-youtube.m-1
-                                i.fab.fa-twitter.m-1
+                                - const icons = ["fab fa-facebook", "fab fa-youtube", "fab fa-twitter"];
+                                - const links = ["facebook.com", "youtube.com", "twitter.com"];
+                                +generate_icons(icons, true, links)
             .footer__contact.col-6.mt-5
                 h3 contact details
                 p Feel free to contact us by phone, email or by our contact form.
@@ -60,13 +67,11 @@ footer.main-footer
             .footer__bottom.col-12.d-flex.align-items-center
                 .terms-and-conditions.m-auto
                     ul
-                        li.d-inline-block Disclaimer
-                        li.d-inline-block Conditions of use
-                        li.d-inline-block Cancellation policy
+                        - const terms = ["Disclaimer", "Conditions of use", "Cancellation policy"];
+                        each term in terms
+                            li
+                                a(href="#") #{term}
                 .credits
-                    i.fa.fa-credit-card.ml-2
-                    i.fab.fa-cc-paypal.ml-2
-                    i.fab.fa-cc-mastercard.ml-2
-                    i.fab.fa-cc-amex.ml-2
-                    i.fab.fa-cc-discover.ml-2
+                    - const creditCard = ["fa fa-credit-card", "fab fa-cc-paypal", "fab fa-cc-mastercard", "fab fa-cc-amex", "fab fa-cc-discover"];
+                    +generate_icons(creditCard, true)
 // footer ends
