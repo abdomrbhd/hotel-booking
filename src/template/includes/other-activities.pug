@@ -5,7 +5,7 @@
         .activities
             .activities__wrap.d-flex.justify-content-between
                 each act in activities
-                    .activity.p-4.overflow-hidden.d-flex
+                    div(class="activity p-4 overflow-hidden d-flex background-img activity-" + act.number)
                         .activity__content.mt-auto
                             h6.mb-3 #{act.headline}
                             button(class="button button-pr pt-1 pr-4 pb-1 pl-4") Book Now

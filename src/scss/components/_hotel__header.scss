@@ -1,16 +1,11 @@
-.hotel__header {
-    .hotel__title {
-        .headline {
-            h3 {
-                margin-bottom: 0;
-            }
-        }
-        .offer {
-            span {
-                color: var(--primary-color);
-                background-color: var(--primary-background);
-                border-radius: .3rem;
-            }
+/*
+ * Hotel header
+ */
+.hotel__title {
+    .offer {
+        span {
+            color: var(--primary-color);
+            background-color: var(--primary-background);
         }
     }
 }
@@ -19,6 +14,6 @@
     .ratting__wrap {
         color: var(--primary-color);
         background-color: var(--primary-background);
-        border-radius: .3rem;
+        border-radius: calc(var(--round) - .4rem);
     }
 }

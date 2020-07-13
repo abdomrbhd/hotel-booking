@@ -1,8 +1,19 @@
+/*
+ * Other Activities
+ */
 .activity {
-    background-color: var(--secondry-color);
     color: var(--primary-color);
-    border-radius: .4rem;
+    border-radius: calc(var(--round) - .3rem);
     height: 250px;
     flex: 0 0 23%;
     max-width: 23%;
+    box-shadow: inset 0px -15px 6px 0px #0006;
+}
+
+$activities: "activity-0" "activity-1" "activity-2" "activity-3";
+
+@each $act in $activities {
+    .#{$act} {
+        background-image: url("../../assets/images/#{$act}.jpg");
+    }
 }

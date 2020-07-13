@@ -4,7 +4,7 @@
 .pkg {
     background-color: var(--secondry-color);
     color: var(--primary-color);
-    border-radius: .4rem;
+    border-radius: calc(var(--round) - .3rem);
     margin-bottom: 2rem;
     .pkg-content {
         padding: 1.7rem 1.3rem;
@@ -52,6 +52,23 @@
     margin-top: auto;
 }
 
-.img-inner {
+.pkg .img-inner {
     min-height: 250px;
+    background: no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+$back-img: (
+    ("hotel-blue" "hotel-blue.jpg")
+    ("lux" "lux.jpg")
+    ("white-place" "white-place.jpg")
+    ("luxury-place" "luxury-place.jpg")
+    ("hotel-five-star" "hotel-five-star.jpg")
+);
+
+@each $hotel, $img in $back-img {
+    .#{$hotel}__image .img-inner {
+        background-image: url("../../assets/images/#{$img}");
+    }
 }

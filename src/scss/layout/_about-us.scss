@@ -3,7 +3,7 @@
  */
 .quote-wrap {
     background-color: var(--primary-color);
-    border-radius: .4rem;
+    border-radius: calc(var(--round) - .3rem);
     padding: 3rem 6rem !important;
 }
 
@@ -12,7 +12,6 @@
 }
 
 .person-img {
-    position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 100%;
